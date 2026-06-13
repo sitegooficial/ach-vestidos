@@ -1,0 +1,1485 @@
+/* ============================================
+   ACH Vestidos - Estilos compartidos
+   Paleta: rosa empolvado, durazno, crema
+   ============================================ */
+
+/* Variables de color y tipografía */
+:root {
+  --rosa-empolvado: #e8c5c5;
+  --rosa-suave: #f4d6d6;
+  --durazno: #f5cba7;
+  --crema: #fdf6ef;
+  --crema-oscuro: #f9ebe0;
+  --texto: #4a3a3a;
+  --texto-suave: #7a6a6a;
+  --acento: #c98a8a;
+  --acento-oscuro: #a86a6a;
+  --blanco: #ffffff;
+  /* Sombras más suaves y en dos capas, sienten más a "papel" */
+  --sombra: 0 1px 2px rgba(201, 138, 138, 0.04),
+            0 8px 28px rgba(201, 138, 138, 0.08);
+  --sombra-fuerte: 0 4px 10px rgba(201, 138, 138, 0.08),
+                   0 16px 44px rgba(201, 138, 138, 0.14);
+  --serif: 'Playfair Display', 'Georgia', serif;
+  --sans: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  --manuscrita: 'Dancing Script', 'Brush Script MT', cursive;
+}
+
+/* Texto manuscrito (para palabras acento como "Glamour", "Vestidos") */
+.manuscrita {
+  font-family: var(--manuscrita);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+
+.seccion-titulo h2 .manuscrita { color: var(--acento); }
+.makeup-encabezado h2 .manuscrita { color: var(--acento); }
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--texto);
+  /* Fondo tipo acuarela suave: tres halos de color sobre crema */
+  background:
+    radial-gradient(circle at 12% 8%, rgba(232, 197, 197, 0.22) 0%, transparent 38%),
+    radial-gradient(circle at 88% 22%, rgba(245, 203, 167, 0.20) 0%, transparent 42%),
+    radial-gradient(circle at 50% 95%, rgba(232, 197, 197, 0.14) 0%, transparent 45%),
+    var(--crema);
+  background-attachment: fixed;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 600;
+  color: var(--texto);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================
+   NAVEGACIÓN (compartida)
+   ============================================ */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(253, 246, 239, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(201, 138, 138, 0.08);
+}
+
+.nav-contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--acento-oscuro);
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: var(--acento);
+  font-style: italic;
+}
+
+.menu {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.menu a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--texto);
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu a.activo {
+  color: var(--acento-oscuro);
+}
+
+.menu a.activo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--acento);
+  border-radius: 2px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: var(--acento-oscuro);
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-align: center;
+}
+
+.btn-primario {
+  background: var(--acento);
+  color: var(--blanco);
+  box-shadow: var(--sombra);
+}
+
+.btn-primario:hover {
+  background: var(--acento-oscuro);
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-fuerte);
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: var(--blanco);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe57;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z'/></svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* ============================================
+   HERO (portada)
+   ============================================ */
+.hero {
+  background: linear-gradient(135deg, var(--crema) 0%, var(--rosa-suave) 100%);
+  padding: 80px 20px 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: var(--durazno);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.hero::before {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+}
+
+.hero::after {
+  width: 400px;
+  height: 400px;
+  bottom: -150px;
+  right: -150px;
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: 20px;
+  color: var(--acento-oscuro);
+}
+
+.hero h1 em,
+.hero h1 .manuscrita {
+  color: var(--acento);
+  font-style: italic;
+}
+
+.hero h1 .manuscrita {
+  font-size: 1.15em;
+  font-style: normal;
+  margin-left: 4px;
+}
+
+/* ============================================
+   DIVISOR FLORAL ENTRE SECCIONES
+   Para usarlo:
+     <div class="divisor-floral" aria-hidden="true"></div>
+   ============================================ */
+.divisor-floral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 20px;
+  color: var(--acento);
+  opacity: 0.55;
+}
+
+.divisor-floral::before {
+  content: '';
+  width: 260px;
+  max-width: 70vw;
+  height: 34px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 34' fill='none' stroke='%23c98a8a' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 18 C 50 4, 90 30, 122 18' /><path d='M138 18 C 170 4, 210 30, 254 18' /><g transform='translate(130 18)'><ellipse cx='0' cy='-7' rx='2.8' ry='4.5' /><ellipse cx='0' cy='7' rx='2.8' ry='4.5' /><ellipse cx='-6.5' cy='-2.5' rx='4.5' ry='2.8' transform='rotate(-30)' /><ellipse cx='6.5' cy='-2.5' rx='4.5' ry='2.8' transform='rotate(30)' /><circle r='1.7' fill='%23c98a8a' stroke='none' /></g><path d='M30 18 q 9 -7 15 -1' /><path d='M48 18 q -2 -8 7 -10' /><path d='M230 18 q -9 -7 -15 -1' /><path d='M212 18 q 2 -8 -7 -10' /></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Variante chiquita para títulos internos */
+.divisor-floral-mini::before {
+  width: 140px;
+  height: 22px;
+}
+
+.hero .subtitulo {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--texto-suave);
+  margin-bottom: 16px;
+}
+
+.hero .bienvenida {
+  font-size: 1.1rem;
+  color: var(--texto);
+  margin-bottom: 36px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================
+   SECCIONES GENERALES
+   ============================================ */
+.seccion {
+  padding: 80px 20px;
+}
+
+.seccion-titulo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.seccion-titulo h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 12px;
+  color: var(--acento-oscuro);
+}
+
+.seccion-titulo p {
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Florecita dibujada a mano que reemplaza la barra recta debajo
+   de cada título de sección */
+.seccion-titulo::after {
+  content: '';
+  display: block;
+  width: 110px;
+  height: 18px;
+  margin: 22px auto 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 110 18' fill='none' stroke='%23c98a8a' stroke-width='1.3' stroke-linecap='round'><path d='M3 12 C 18 2, 32 18, 47 10' /><path d='M63 10 C 78 18, 92 2, 107 12' /><circle cx='55' cy='9' r='2.5' fill='%23c98a8a' stroke='none'/><path d='M55 4.5 q -2.5 -3 -5 -2' /><path d='M55 4.5 q 2.5 -3 5 -2' /><path d='M55 13.5 q -2 3 -4.5 3' /><path d='M55 13.5 q 2 3 4.5 3' /></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================
+   SERVICIOS (4 tarjetas)
+   ============================================ */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servicio-card {
+  background: var(--blanco);
+  padding: 40px 28px;
+  /* esquinas ligeramente asimétricas - se siente menos perfecto */
+  border-radius: 28px 24px 28px 24px;
+  text-align: center;
+  box-shadow: var(--sombra);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(232, 197, 197, 0.3);
+  position: relative;
+}
+
+.servicio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-fuerte);
+}
+
+.servicio-icono {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--rosa-suave), var(--durazno));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.servicio-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: var(--acento-oscuro);
+}
+
+.servicio-card p {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   CATÁLOGO / VESTIDOS DESTACADOS
+   ============================================ */
+.vestidos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vestido-card {
+  background: var(--blanco);
+  border-radius: 24px 20px 24px 20px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.vestido-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-fuerte);
+}
+
+.vestido-imagen {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  background: var(--rosa-suave);
+}
+
+.vestido-info {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.vestido-info h3 {
+  font-size: 1.25rem;
+  color: var(--acento-oscuro);
+}
+
+.vestido-info p {
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+.vestido-info .btn-whatsapp {
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  justify-content: center;
+}
+
+/* Tarjeta-link (catálogo unificado generado desde vestidos.js) */
+.vestido-card-link {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.vestido-card-link .vestido-info {
+  padding: 18px 22px 22px;
+  text-align: center;
+}
+
+.vestido-card-link h3 {
+  font-size: 1.2rem;
+  color: var(--acento-oscuro);
+  margin: 0;
+}
+
+/* Badge "Renta / Venta / Renta y venta" en la esquina */
+.vestido-tipo-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: var(--blanco);
+  color: var(--acento-oscuro);
+  box-shadow: 0 2px 8px rgba(201, 138, 138, 0.2);
+}
+
+.vestido-tipo-ambos {
+  background: linear-gradient(135deg, var(--rosa-empolvado), var(--durazno));
+  color: var(--blanco);
+}
+
+.vestido-tipo-renta {
+  background: var(--rosa-suave);
+  color: var(--acento-oscuro);
+}
+
+.vestido-tipo-venta {
+  background: var(--durazno);
+  color: var(--acento-oscuro);
+}
+
+/* ============================================
+   MODAL DE DETALLE DE VESTIDO
+   ============================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(74, 58, 58, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0s linear 0.25s;
+}
+
+.modal-overlay.abierto {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s, visibility 0s;
+}
+
+body.modal-abierto {
+  overflow: hidden;
+}
+
+.modal-contenido {
+  background: var(--crema);
+  border-radius: 22px;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 0;
+  box-shadow: 0 20px 60px rgba(74, 58, 58, 0.4);
+  position: relative;
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.abierto .modal-contenido {
+  transform: translateY(0) scale(1);
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 5;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: var(--blanco);
+  color: var(--acento-oscuro);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--sombra);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-cerrar:hover {
+  background: var(--acento);
+  color: var(--blanco);
+  transform: rotate(90deg);
+}
+
+/* --- Galería (izquierda) --- */
+.modal-galeria {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--crema-oscuro);
+}
+
+.modal-foto-principal {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 16px;
+  background: var(--rosa-suave);
+  box-shadow: var(--sombra);
+}
+
+.modal-miniaturas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.modal-miniatura {
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: var(--blanco);
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 1/1;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.modal-miniatura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-miniatura:hover {
+  transform: translateY(-2px);
+}
+
+.modal-miniatura.activa {
+  border-color: var(--acento);
+}
+
+/* --- Información (derecha) --- */
+.modal-info {
+  padding: 50px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-badge {
+  position: static;
+  align-self: flex-start;
+}
+
+.modal-info h2 {
+  font-size: 2rem;
+  color: var(--acento-oscuro);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.modal-descripcion {
+  color: var(--texto);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.modal-precios {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.modal-precio {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--blanco);
+  border-radius: 14px;
+  border-left: 4px solid var(--acento);
+  box-shadow: 0 2px 8px rgba(201, 138, 138, 0.1);
+}
+
+.modal-precio-label {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.modal-precio-valor {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--acento-oscuro);
+  font-size: 1.4rem;
+}
+
+/* --- Botones de acción del modal --- */
+.modal-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.modal-acciones .btn-whatsapp {
+  justify-content: center;
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 0.98rem;
+}
+
+/* --- Responsive móvil --- */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 0;
+  }
+
+  .modal-contenido {
+    grid-template-columns: 1fr;
+    border-radius: 0;
+    max-height: 100vh;
+    height: 100vh;
+  }
+
+  .modal-galeria {
+    padding: 60px 20px 20px;
+  }
+
+  .modal-foto-principal {
+    aspect-ratio: 4/5;
+  }
+
+  .modal-info {
+    padding: 24px 24px 40px;
+  }
+
+  .modal-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .modal-cerrar {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+/* Subsección de catálogo (Renta / Venta / Diseño) */
+.catalogo-seccion {
+  margin-bottom: 70px;
+}
+
+.catalogo-seccion-titulo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--rosa-suave);
+}
+
+.catalogo-seccion-titulo h2 {
+  font-size: 2rem;
+  color: var(--acento-oscuro);
+}
+
+.catalogo-seccion-titulo .badge {
+  background: var(--rosa-suave);
+  color: var(--acento-oscuro);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-family: var(--sans);
+  font-weight: 500;
+}
+
+/* ============================================
+   CTA (llamada a la acción)
+   ============================================ */
+.cta {
+  background: linear-gradient(135deg, var(--rosa-empolvado) 0%, var(--durazno) 100%);
+  padding: 70px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 16px;
+  color: var(--blanco);
+}
+
+.cta p {
+  color: var(--blanco);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+/* ============================================
+   SERVICIOS DETALLE (página servicios.html)
+   ============================================ */
+.servicio-detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 80px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servicio-detalle.invertido .servicio-detalle-img {
+  order: 2;
+}
+
+.servicio-detalle-img {
+  background: linear-gradient(135deg, var(--rosa-suave), var(--durazno));
+  border-radius: 20px;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  box-shadow: var(--sombra);
+}
+
+.servicio-detalle-texto h3 {
+  font-size: 2rem;
+  color: var(--acento-oscuro);
+  margin-bottom: 16px;
+}
+
+.servicio-detalle-texto p {
+  color: var(--texto);
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.servicio-detalle-texto ul {
+  list-style: none;
+  margin: 16px 0;
+}
+
+.servicio-detalle-texto ul li {
+  padding: 6px 0 6px 28px;
+  position: relative;
+  color: var(--texto);
+}
+
+.servicio-detalle-texto ul li::before {
+  content: '✿';
+  position: absolute;
+  left: 0;
+  color: var(--acento);
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   CONTACTO
+   ============================================ */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contacto-card {
+  background: var(--blanco);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: var(--sombra);
+}
+
+.contacto-card h3 {
+  font-size: 1.5rem;
+  color: var(--acento-oscuro);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contacto-info {
+  margin-bottom: 16px;
+  color: var(--texto);
+}
+
+.contacto-info strong {
+  color: var(--acento-oscuro);
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--serif);
+}
+
+.horarios-lista {
+  list-style: none;
+}
+
+.horarios-lista li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--crema-oscuro);
+  display: flex;
+  justify-content: space-between;
+}
+
+.horarios-lista li:last-child {
+  border-bottom: none;
+}
+
+.horarios-lista .dia {
+  font-weight: 500;
+}
+
+.horarios-lista .horario {
+  color: var(--texto-suave);
+}
+
+.mapa-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  margin-top: 30px;
+}
+
+.mapa-wrapper iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  display: block;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--texto);
+  color: var(--crema);
+  padding: 50px 20px 25px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer .logo {
+  color: var(--rosa-suave);
+  margin-bottom: 12px;
+}
+
+.footer p {
+  opacity: 0.85;
+  font-size: 0.92rem;
+  margin-bottom: 8px;
+}
+
+.footer-divisor {
+  height: 1px;
+  background: rgba(253, 246, 239, 0.15);
+  margin: 24px auto;
+  max-width: 200px;
+}
+
+.footer .copy {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Redes sociales (footer + contacto) */
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 18px 0 12px;
+  flex-wrap: wrap;
+}
+
+.redes-sociales a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--rosa-suave);
+  color: var(--acento-oscuro);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s, background 0.25s, color 0.25s;
+}
+
+.redes-sociales a:hover {
+  background: var(--acento);
+  color: var(--blanco);
+  transform: translateY(-3px);
+}
+
+.redes-sociales svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Variante grande para tarjeta de contacto */
+.redes-grandes a {
+  width: 56px;
+  height: 56px;
+}
+
+.redes-grandes svg {
+  width: 26px;
+  height: 26px;
+}
+
+.redes-handles {
+  text-align: center;
+  margin-top: 14px;
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.redes-handles strong {
+  color: var(--acento-oscuro);
+  font-family: var(--serif);
+}
+
+/* ============================================
+   ACH MAKEUP (sección en servicios.html)
+   ============================================ */
+.ach-makeup {
+  position: relative;
+  padding: 90px 20px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(245, 203, 167, 0.35) 0, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(232, 197, 197, 0.4) 0, transparent 45%),
+    var(--crema);
+  overflow: hidden;
+}
+
+.makeup-encabezado {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 60px;
+}
+
+.makeup-marca {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--acento);
+  margin-bottom: 14px;
+}
+
+.makeup-encabezado h2 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: var(--acento-oscuro);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.makeup-encabezado h2::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: var(--acento);
+  border-radius: 3px;
+  margin: 22px auto 0;
+}
+
+.makeup-sub {
+  color: var(--texto-suave);
+  font-size: 1.08rem;
+  margin-top: 18px;
+}
+
+/* --- Tarjetas de servicios --- */
+.makeup-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
+
+.makeup-card {
+  background: var(--blanco);
+  border-radius: 28px 24px 28px 24px;
+  padding: 36px 26px 28px;
+  text-align: center;
+  box-shadow: var(--sombra);
+  border: 1px solid rgba(232, 197, 197, 0.35);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+/* Florecita en la esquina superior derecha de las tarjetas makeup */
+.makeup-card::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e8c5c5'><circle cx='8' cy='3' r='2'/><circle cx='13' cy='8' r='2'/><circle cx='8' cy='13' r='2'/><circle cx='3' cy='8' r='2'/><circle cx='8' cy='8' r='1.5' fill='%23c98a8a'/></svg>");
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.makeup-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-fuerte);
+}
+
+.makeup-icono {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 6px;
+  background: linear-gradient(135deg, var(--rosa-suave), var(--durazno));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.makeup-card h3 {
+  font-size: 1.2rem;
+  color: var(--acento-oscuro);
+  line-height: 1.3;
+}
+
+.makeup-card p {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.makeup-precio {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--acento-oscuro);
+  font-size: 1.6rem;
+  margin-top: 8px;
+}
+
+.makeup-precio small {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+  letter-spacing: 1px;
+  margin-left: 4px;
+}
+
+/* --- Paquete destacado --- */
+.makeup-paquete {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto 60px;
+  padding: 50px 40px 42px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--rosa-empolvado) 0%, var(--durazno) 100%);
+  color: var(--blanco);
+  text-align: center;
+  box-shadow: 0 18px 50px rgba(201, 138, 138, 0.3);
+  overflow: hidden;
+}
+
+.makeup-paquete::before {
+  content: '✿';
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  font-size: 12rem;
+  color: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.makeup-paquete::after {
+  content: '✿';
+  position: absolute;
+  bottom: -50px;
+  right: -30px;
+  font-size: 12rem;
+  color: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.makeup-paquete-ribbon {
+  display: inline-block;
+  background: var(--blanco);
+  color: var(--acento-oscuro);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1;
+}
+
+.makeup-paquete h3 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  color: var(--blanco);
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.makeup-paquete-sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.08rem;
+  margin-bottom: 22px;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.makeup-paquete-desc {
+  max-width: 520px;
+  margin: 0 auto 18px;
+  line-height: 1.6;
+  font-size: 1rem;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.makeup-paquete-precio {
+  display: inline-block;
+  background: var(--blanco);
+  color: var(--acento-oscuro);
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 2.2rem;
+  padding: 12px 32px;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 1;
+}
+
+.makeup-paquete-precio small {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--texto-suave);
+  letter-spacing: 1px;
+  margin-left: 6px;
+}
+
+/* --- Nota informativa --- */
+.makeup-nota {
+  max-width: 820px;
+  margin: 0 auto 60px;
+  padding: 22px 28px;
+  background: var(--crema-oscuro);
+  border-left: 4px solid var(--acento);
+  border-radius: 12px;
+}
+
+.makeup-nota p {
+  color: var(--texto);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.makeup-nota strong {
+  color: var(--acento-oscuro);
+}
+
+/* --- Iconos de beneficios --- */
+.makeup-beneficios {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+}
+
+.makeup-beneficio {
+  text-align: center;
+  padding: 14px;
+}
+
+.makeup-beneficio-icono {
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 12px;
+  background: var(--blanco);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: var(--sombra);
+}
+
+.makeup-beneficio p {
+  font-family: var(--serif);
+  color: var(--acento-oscuro);
+  font-size: 0.98rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* --- Cierre --- */
+.makeup-cierre {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.makeup-frase {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  color: var(--acento-oscuro);
+  margin-bottom: 26px;
+  line-height: 1.4;
+}
+
+.makeup-cta-btn {
+  cursor: pointer;
+}
+
+/* --- Botones de WhatsApp dentro de las tarjetas Makeup --- */
+.makeup-card-btn {
+  margin-top: 8px;
+  justify-content: center;
+  width: 100%;
+  font-size: 0.92rem;
+  padding: 12px 18px;
+}
+
+/* Botón del paquete destacado: blanco con texto rosa para contrastar
+   con el fondo gradient rosa-durazno */
+.makeup-paquete-btn {
+  margin-top: 24px;
+  background: var(--blanco);
+  color: var(--acento-oscuro);
+  padding: 14px 30px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.makeup-paquete-btn:hover {
+  background: var(--crema);
+  color: var(--acento-oscuro);
+}
+
+.makeup-paquete-btn::before {
+  filter: invert(35%) sepia(38%) saturate(450%) hue-rotate(315deg) brightness(85%);
+}
+
+/* Botón compacto dentro de la nota informativa */
+.makeup-nota-btn {
+  margin-top: 14px;
+  padding: 10px 22px;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 768px) {
+  .ach-makeup {
+    padding: 70px 20px;
+  }
+  .makeup-paquete {
+    padding: 40px 24px 34px;
+  }
+  .makeup-paquete-precio {
+    font-size: 1.8rem;
+    padding: 10px 24px;
+  }
+  .makeup-beneficios {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE (móvil)
+   ============================================ */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--crema);
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 8px 20px rgba(201, 138, 138, 0.15);
+  }
+
+  .menu.abierto {
+    max-height: 400px;
+  }
+
+  .menu li {
+    border-bottom: 1px solid var(--rosa-suave);
+  }
+
+  .menu a {
+    display: block;
+    padding: 16px 24px;
+  }
+
+  .menu a.activo::after {
+    display: none;
+  }
+
+  .hero {
+    padding: 60px 20px 70px;
+  }
+
+  .seccion {
+    padding: 60px 20px;
+  }
+
+  .servicio-detalle {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .servicio-detalle.invertido .servicio-detalle-img {
+    order: 0;
+  }
+
+  .contacto-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contacto-card {
+    padding: 28px;
+  }
+
+  .catalogo-seccion-titulo {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .catalogo-seccion-titulo h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vestidos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}

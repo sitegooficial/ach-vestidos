@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACH Vestidos — Renta, venta, diseño y reparación en Uruapan</title>
+  <meta name="description" content="ACH Vestidos en Uruapan, Michoacán. Renta, venta, diseño a medida y reparación de vestidos. Estilo romántico y elegante." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       NAVEGACIÓN (igual en todas las páginas)
+       ============================================ -->
+  <nav class="navbar">
+    <div class="nav-contenedor">
+      <a href="index.html" class="logo">ACH <span>Vestidos</span></a>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <ul class="menu">
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO / PORTADA
+       ============================================ -->
+  <header class="hero">
+    <div class="hero-contenido">
+      <!-- 💛 Edita aquí: frase corta arriba del nombre -->
+      <p class="subtitulo">Pequeña boutique romántica · Uruapan</p>
+
+      <h1>ACH <span class="manuscrita">Vestidos</span></h1>
+
+      <!-- 💛 Edita aquí: bienvenida cálida (mantén el tono cercano) -->
+      <p class="bienvenida">
+        Pasa, ponte cómoda. Aquí cada vestido se imagina, se dibuja y
+        se cose a mano — con tiempo, con cariño, pensando en una
+        persona y en un momento. Nos encantará conocer el tuyo.
+      </p>
+
+      <a class="btn btn-whatsapp" data-wa="cita">
+        Escríbenos por WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Divisor floral entre hero y servicios -->
+  <div class="divisor-floral" aria-hidden="true"></div>
+
+  <!-- ============================================
+       SECCIÓN: 4 SERVICIOS
+       ============================================ -->
+  <section class="seccion">
+    <div class="seccion-titulo">
+      <!-- 💛 Edita aquí: título y frase de los servicios -->
+      <h2>Lo que hacemos <span class="manuscrita">contigo</span></h2>
+      <p>Tres formas de acompañarte en tu día — con calma, sin prisa, a tu medida.</p>
+    </div>
+
+    <div class="servicios-grid">
+      <div class="servicio-card">
+        <div class="servicio-icono">✂️</div>
+        <h3>Diseño de modas personalizado</h3>
+        <p>Creamos tu vestido desde cero según tus ideas, medidas y estilo personal.</p>
+      </div>
+
+      <div class="servicio-card">
+        <div class="servicio-icono">👗</div>
+        <h3>Renta de vestidos</h3>
+        <p>Renta el vestido perfecto para tu evento, todos elaborados por nosotros.</p>
+      </div>
+
+      <div class="servicio-card">
+        <div class="servicio-icono">🛍️</div>
+        <h3>Venta de vestidos</h3>
+        <p>Vestidos únicos para que sean tuyos para siempre y los conserves como recuerdo.</p>
+      </div>
+    </div>
+
+    <!-- 💛 Edita aquí: frase decorativa bajo los servicios -->
+    <p style="text-align:center; margin-top: 40px; max-width: 720px; margin-left:auto; margin-right:auto; color: var(--texto-suave); font-style: italic; font-family: var(--serif); font-size: 1.05rem;">
+      ✿ Cada pieza nace en nuestro taller, una a una, con sus tiempos ✿
+    </p>
+  </section>
+
+  <!-- Divisor floral -->
+  <div class="divisor-floral" aria-hidden="true"></div>
+
+  <!-- ============================================
+       SECCIÓN: VESTIDOS DESTACADOS
+       Para agregar otro destacado: copia un bloque
+       <article class="vestido-card">...</article>
+       ============================================ -->
+  <section class="seccion" style="background: var(--crema-oscuro);">
+    <div class="seccion-titulo">
+      <!-- 💛 Edita aquí: título de la sección destacados -->
+      <h2>Vestidos <span class="manuscrita">favoritos</span></h2>
+      <p>Una pequeña muestra de las piezas que nos tienen enamoradas esta temporada.</p>
+    </div>
+
+    <div class="vestidos-grid">
+
+      <!-- VESTIDO DESTACADO 1 -->
+      <article class="vestido-card">
+        <img class="vestido-imagen"
+             src="imagenes/destacado-1.jpg"
+             onerror="this.onerror=null;this.src='https://placehold.co/600x800/f4d6d6/c98a8a?text=Vestido+1'"
+             alt="Vestido destacado 1" />
+        <div class="vestido-info">
+          <h3>Vestido Encanto</h3>
+          <p>Pieza romántica con acabados elegantes, diseñada en nuestro taller.</p>
+          <a class="btn btn-whatsapp" data-wa="destacado" data-vestido="Encanto">
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- VESTIDO DESTACADO 2 -->
+      <article class="vestido-card">
+        <img class="vestido-imagen"
+             src="imagenes/destacado-2.jpg"
+             onerror="this.onerror=null;this.src='https://placehold.co/600x800/f5cba7/a86a6a?text=Vestido+2'"
+             alt="Vestido destacado 2" />
+        <div class="vestido-info">
+          <h3>Vestido Serenata</h3>
+          <p>Estilo femenino y delicado, perfecto para una ocasión especial.</p>
+          <a class="btn btn-whatsapp" data-wa="destacado" data-vestido="Serenata">
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- VESTIDO DESTACADO 3 -->
+      <article class="vestido-card">
+        <img class="vestido-imagen"
+             src="imagenes/destacado-3.jpg"
+             onerror="this.onerror=null;this.src='https://placehold.co/600x800/e8c5c5/a86a6a?text=Vestido+3'"
+             alt="Vestido destacado 3" />
+        <div class="vestido-info">
+          <h3>Vestido Mirabel</h3>
+          <p>Diseño con caída suave y detalles que enamoran a primera vista.</p>
+          <a class="btn btn-whatsapp" data-wa="destacado" data-vestido="Mirabel">
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- VESTIDO DESTACADO 4 -->
+      <article class="vestido-card">
+        <img class="vestido-imagen"
+             src="imagenes/destacado-4.jpg"
+             onerror="this.onerror=null;this.src='https://placehold.co/600x800/fdf6ef/c98a8a?text=Vestido+4'"
+             alt="Vestido destacado 4" />
+        <div class="vestido-info">
+          <h3>Vestido Vainilla</h3>
+          <p>Una propuesta elegante y atemporal hecha con dedicación.</p>
+          <a class="btn btn-whatsapp" data-wa="destacado" data-vestido="Vainilla">
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="catalogo.html" class="btn btn-primario">Ver catálogo completo</a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ACH MAKEUP — Servicios de belleza
+       (mismo contenido que servicios.html — si cambias uno,
+        recuerda actualizar el otro)
+       ============================================ -->
+  <!-- Divisor floral antes de ACH Makeup -->
+  <div class="divisor-floral" aria-hidden="true"></div>
+
+  <section class="ach-makeup" id="makeup">
+    <div class="contenedor">
+
+      <div class="makeup-encabezado">
+        <p class="makeup-marca">ACH <span class="manuscrita">Makeup</span></p>
+        <!-- 💛 Edita aquí: título del apartado de belleza -->
+        <h2>Luce increíble, siéntete <span class="manuscrita">inolvidable</span></h2>
+        <p class="makeup-sub">Maquillaje y peinado profesional para cada ocasión especial</p>
+      </div>
+
+      <!-- Tarjetas de servicios individuales -->
+      <div class="makeup-servicios">
+        <article class="makeup-card">
+          <div class="makeup-icono">💄</div>
+          <h3>Maquillaje Express</h3>
+          <p>Rápido, fresco y natural.</p>
+          <span class="makeup-precio">$599 <small>MXN</small></span>
+          <a class="btn btn-whatsapp makeup-card-btn" data-wa="makeupExpress">
+            Reservar
+          </a>
+        </article>
+
+        <article class="makeup-card">
+          <div class="makeup-icono">💁‍♀️</div>
+          <h3>Ondas o Alaciado</h3>
+          <p>Peinado sencillo y duradero.</p>
+          <span class="makeup-precio">$250 <small>MXN</small></span>
+          <a class="btn btn-whatsapp makeup-card-btn" data-wa="makeupOndas">
+            Reservar
+          </a>
+        </article>
+
+        <article class="makeup-card">
+          <div class="makeup-icono">✨</div>
+          <h3>Maquillaje Express + Ondas o Alaciado</h3>
+          <p>El combo perfecto para realzar tu belleza.</p>
+          <span class="makeup-precio">$799 <small>MXN</small></span>
+          <a class="btn btn-whatsapp makeup-card-btn" data-wa="makeupCombo">
+            Reservar combo
+          </a>
+        </article>
+      </div>
+
+      <!-- Paquete destacado -->
+      <article class="makeup-paquete">
+        <span class="makeup-paquete-ribbon">Promoción especial</span>
+        <h3>Paquete <span class="manuscrita">Glamour</span></h3>
+        <p class="makeup-paquete-sub">Elegancia, estilo y confianza en una sola experiencia.</p>
+        <p class="makeup-paquete-desc">
+          Al rentar tu vestido, adquiere tu paquete de
+          <strong>Maquillaje Express + Ondas o Alaciado</strong>
+          por solo
+        </p>
+        <span class="makeup-paquete-precio">$700 <small>MXN</small></span>
+        <a class="btn btn-whatsapp makeup-paquete-btn" data-wa="makeupGlamour">
+          Quiero el Paquete Glamour
+        </a>
+      </article>
+
+      <!-- Nota informativa -->
+      <div class="makeup-nota">
+        <p>
+          Los precios mostrados son solo para maquillaje exprés.
+          También manejamos maquillajes más sociales, de noche y glam,
+          adaptados a tu estilo y ocasión.
+        </p>
+        <a class="btn btn-whatsapp makeup-nota-btn" data-wa="makeupPersonalizado">
+          Pregunta por opciones personalizadas
+        </a>
+      </div>
+
+      <!-- Iconos de beneficios -->
+      <div class="makeup-beneficios">
+        <div class="makeup-beneficio">
+          <span class="makeup-beneficio-icono">🌸</span>
+          <p>Productos de alta calidad</p>
+        </div>
+        <div class="makeup-beneficio">
+          <span class="makeup-beneficio-icono">✨</span>
+          <p>Acabado profesional</p>
+        </div>
+        <div class="makeup-beneficio">
+          <span class="makeup-beneficio-icono">⏰</span>
+          <p>Duración todo el día</p>
+        </div>
+        <div class="makeup-beneficio">
+          <span class="makeup-beneficio-icono">💖</span>
+          <p>Perfecto para cada ocasión</p>
+        </div>
+      </div>
+
+      <!-- Cierre -->
+      <div class="makeup-cierre">
+        <p class="makeup-frase">"Tú brillas, nosotras realzamos tu luz."</p>
+        <a class="btn btn-primario makeup-cta-btn" data-wa="makeupAgenda">Agenda tu cita</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Divisor floral antes del cierre -->
+  <div class="divisor-floral" aria-hidden="true"></div>
+
+  <!-- ============================================
+       CTA FINAL
+       ============================================ -->
+  <section class="cta">
+    <!-- 💛 Edita aquí: frase del cierre -->
+    <h2>Vení a buscar el <span class="manuscrita">tuyo</span></h2>
+    <p>Mándanos un mensaje, sin compromiso. Aquí siempre hay café y tiempo para charlar.</p>
+    <a class="btn btn-whatsapp" data-wa="cita">
+      Agendar por WhatsApp
+    </a>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="logo">ACH <span>Vestidos</span></div>
+    <p>Uruapan, Michoacán</p>
+    <p>WhatsApp: +52 452 197 9099</p>
+
+    <!-- Redes sociales -->
+    <div class="redes-sociales">
+      <a href="https://www.instagram.com/ach.vestidos" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram: @ach.vestidos">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.21 8.8 2.2 12 2.2M12 0C8.74 0 8.33 0 7.05.07 5.78.13 4.9.32 4.14.62c-.79.31-1.46.72-2.13 1.39C1.34 2.68.93 3.35.62 4.14.32 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s0 3.67.07 4.95c.06 1.27.25 2.15.55 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.64.49 2.91.55C8.33 24 8.74 24 12 24s3.67 0 4.95-.07c1.27-.06 2.15-.25 2.91-.55.79-.31 1.46-.72 2.13-1.39.67-.67 1.08-1.34 1.39-2.13.3-.76.49-1.64.55-2.91.07-1.28.07-1.69.07-4.95s0-3.67-.07-4.95c-.06-1.27-.25-2.15-.55-2.91-.31-.79-.72-1.46-1.39-2.13C21.32 1.34 20.65.93 19.86.62 19.1.32 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/ach.vestidos" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook: ach.vestidos">
+        <svg viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.408.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.592 1.323-1.324V1.325C24 .593 23.408 0 22.675 0z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@ach.vestidos2" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok: @ach.vestidos2">
+        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+      </a>
+    </div>
+
+    <div class="footer-divisor"></div>
+    <p class="copy">© 2026 ACH Vestidos. Hecho con cariño.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
