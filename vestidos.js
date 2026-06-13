@@ -22,34 +22,94 @@
 
 const VESTIDOS = [
 
-  // ----- VESTIDO DE EJEMPLO 1 -----
+  {
+    nombre: "Esmeralda",
+    tipo: "ambos",
+    fotos: ["vestido-1.jpg"],
+    precioRenta: "$1,400",
+    precioVenta: "$4,200",
+    descripcion: "Sirena en verde esmeralda con pedrería radial brillante en todo el cuerpo. Strapless de escote corazón, ideal para una noche de gala o graduación."
+  },
+
+  {
+    nombre: "Aurora",
+    tipo: "ambos",
+    fotos: ["vestido-2.jpg"],
+    precioRenta: "$1,100",
+    precioVenta: "$3,300",
+    descripcion: "Tono azul cielo en silueta sirena. Corsé fruncido con detalles de perlas en los costados y falda de tul vaporoso. Romántico y delicado."
+  },
+
+  {
+    nombre: "Ónix",
+    tipo: "ambos",
+    fotos: ["vestido-3.jpg"],
+    precioRenta: "$1,300",
+    precioVenta: "$3,900",
+    descripcion: "Sirena negra con corsé estructurado en pedrería plateada y delicado fruncido en cintura. Una pieza poderosa y elegante."
+  },
+
+  {
+    nombre: "Imperial",
+    tipo: "ambos",
+    fotos: ["vestido-4.jpg"],
+    precioRenta: "$1,500",
+    precioVenta: "$4,500",
+    descripcion: "Halter negro con escote alto, pedrería art déco en el corpiño y sobrefalda satinada con cola dramática. Una opción imponente para evento de etiqueta."
+  },
+
+  {
+    nombre: "Salvia",
+    tipo: "ambos",
+    fotos: ["vestido-5.jpg"],
+    precioRenta: "$1,000",
+    precioVenta: "$3,000",
+    descripcion: "Verde salvia con tirantes finos y escote en V. Falda de tul en capas tipo cascada, con un aire fresco y romántico para eventos al aire libre."
+  },
+
   {
     nombre: "Magnolia",
     tipo: "ambos",
-    fotos: ["magnolia-1.jpg", "magnolia-2.jpg", "magnolia-3.jpg", "magnolia-4.jpg"],
+    fotos: ["vestido-6.jpg"],
     precioRenta: "$800",
-    precioVenta: "$2,500",
-    descripcion: "Largo, estilo princesa con detalles brillantes. Ideal para XV años."
+    precioVenta: "$2,400",
+    descripcion: "Fucsia satinado en silueta sirena, con drapeado suave en cintura. Femenino, vibrante y muy fotogénico."
   },
 
-  // ----- VESTIDO DE EJEMPLO 2 -----
   {
-    nombre: "Dalia",
+    nombre: "Cristal",
     tipo: "ambos",
-    fotos: ["dalia-1.jpg", "dalia-2.jpg", "dalia-3.jpg", "dalia-4.jpg"],
-    precioRenta: "$650",
-    precioVenta: "$2,100",
-    descripcion: "Tono durazno suave con corsé bordado a mano."
+    fotos: ["vestido-7.jpg"],
+    precioRenta: "$1,200",
+    precioVenta: "$3,600",
+    descripcion: "Azul cielo con corsé visible y tiras cruzadas en pedrería sobre el escote. Falda larga en sirena. Una pieza llamativa para destacar."
   },
 
-  // ----- VESTIDO DE EJEMPLO 3 -----
   {
-    nombre: "Camelia",
+    nombre: "Talavera",
     tipo: "ambos",
-    fotos: ["camelia-1.jpg", "camelia-2.jpg", "camelia-3.jpg", "camelia-4.jpg"],
-    precioRenta: "$900",
-    precioVenta: "$3,200",
-    descripcion: "Color crema con falda vaporosa de tul, perfecto para civiles."
+    fotos: ["vestido-8.jpg"],
+    precioRenta: "$1,150",
+    precioVenta: "$3,450",
+    descripcion: "Estampado azul y blanco tipo talavera, en corte princesa con falda amplia. Una propuesta única para quien busca algo distinto."
+  },
+
+  {
+    nombre: "Lunaria",
+    tipo: "ambos",
+    fotos: ["vestido-9.jpg"],
+    precioRenta: "$1,050",
+    precioVenta: "$3,150",
+    descripcion: "Negro romántico con corpiño en tul y falda de capas vaporosas. Estilo princesa moderno, ideal para una noche bajo las estrellas."
+  },
+
+  {
+    nombre: "Florencia",
+    tipo: "ambos",
+    fotos: ["vestido-10.jpg"],
+    precioRenta: "$1,400",
+    precioVenta: "$4,200",
+    descripcion: "Azul cielo con encaje bordado tipo damasco en tonos rosa y dorado, terminado con moño dramático en la espalda. Sofisticado y memorable."
   }
 
   // ----- AÑADE MÁS VESTIDOS DEBAJO (no olvides la coma del anterior) -----
